@@ -141,6 +141,8 @@ class Uno extends JFrame {
         // add cards to the GUI and add actionListener to the cards
         for (int i=0; i<usersCards.size(); i++) {
             JButton b = new JButton();
+        	b.setOpaque(true);
+        	b.setBorderPainted(false);
             b.setText (usersCards.get(i).getValue());
             setButtonColor (usersCards.get(i).getColor(), b);
             setButtonFormat (b);
@@ -203,8 +205,15 @@ class Uno extends JFrame {
 
         // the cards that the computer players play are disabled JButtons
         janetsCard = new JButton();
+        janetsCard.setOpaque(true);
+        janetsCard.setBorderPainted(false);
         bendersCard = new JButton();
+        bendersCard.setOpaque(true);
+        bendersCard.setBorderPainted(false);
         doloressCard = new JButton();
+        doloressCard.setOpaque(true);
+        doloressCard.setBorderPainted(false);
+
         comCards = new JButton[4];
         comCards[0] = new JButton();
         comCards[1] = janetsCard;
@@ -249,7 +258,7 @@ class Uno extends JFrame {
         return winner;
     }
 
-    /** Set the winnder field.
+    /** Set the winner field.
      **/
     public void setWinner(String winner) {
         this.winner = winner;
@@ -276,7 +285,7 @@ class Uno extends JFrame {
     }
 
 
-    /** Select or deselect the usersTurn checkbox.
+    /** Select or de-select the usersTurn checkbox.
      **/
     public void setUsersTurn (boolean usersTurn) {
         this.usersTurn.setSelected(usersTurn);
@@ -302,7 +311,7 @@ class Uno extends JFrame {
     }
 
 
-    /** Select or deselect the game over checkbox.
+    /** Select or de-select the game over checkbox.
      **/
     public void setOver (boolean over) {
         this.over.setSelected(over);
@@ -672,6 +681,11 @@ class Uno extends JFrame {
 
 
     public static void main (String [] args) {
+    	try {
+    		UIManager.setLookAndFeel(UIManager.getCrossPlatformLookAndFeelClassName());
+    	}catch(Exception e){
+    		e.printStackTrace(); 
+    	}
         Uno app = new Uno();
         app.setDefaultCloseOperation (JFrame.EXIT_ON_CLOSE);
     }
