@@ -1,3 +1,5 @@
+package uno;
+
 // Uno.java
 /**
  *  This program contains the layout of the Uno game and a main program. It initialize a Game object and keeps the game
@@ -7,6 +9,7 @@
  * @version Last modified 5/12/2019
  *
  */
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -54,7 +57,8 @@ class Uno extends JFrame {
 
         setTitle("Uno");
         setSize(1000, 800);
-        setLocation(200, 50);
+        setLocationRelativeTo(null);
+        // setLocation(200, 50);
 
         // use nested JPanels
         main = new JPanel();

@@ -1,9 +1,20 @@
 # uno-game-GUI
 
 ## Overview
-This program is a simulation of the popular card game, Uno. The game is unique because of its unconventional deck, which is made up of cards that fall into four different colors, and whose values can be numbers or actions. In Uno, players take turns playing cards. They may only play cards that match the previous card played on its value or color. The twist is that some cards induce consequences, such as forcing the next player to skip their turn or draw cards, reversing the direction of play, or changing the color that the next player must play on. The first player to play all the cards in his or her hand wins the game.
+The popular card game Uno build with Java. In Uno, players take turns playing cards that match the previous card played on its value or color. Some cards have special utilities such as forcing the next player to skip their turn or draw cards, reversing the direction, or changing the current color. The first player to play all the cards in their hand wins the game.
 
-This program utilizes the java Swing class and the java AWT class to create a Graphic User Interface. This GUI simulates the card game and allows human players to compete with three computer players who understand the basic strategy of the game. 
+This app utilizes the java Swing and AWT class to create a Graphic User Interface. This GUI simulates the card game and allows human players to compete with three computer players who understand the basic strategy of the game. 
+
+## Demo
+![image](demo.gif)
+
+## Usage
+
+Run the executable jar file directly or in CLI run
+
+```
+java -jar uno-1.1.jar
+```
 
 ## Rules of the Game
 While there are many variations of Uno, this program implements the basic set of “original” rules (found here). Here’s an explanation of the rules.
